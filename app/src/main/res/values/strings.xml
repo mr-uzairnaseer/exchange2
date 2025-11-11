@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">S2237718</string>
+    <string name="flag_description">Country flag</string>
+    <string name="sample_code">USD</string>
+    <string name="sample_rate">1.2345</string>
+    <string name="sample_title">GBP/USD = 1.2345</string>
+</resources>

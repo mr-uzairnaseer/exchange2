@@ -1,0 +1,2 @@
+rootProject.name = "GBP Currency Exchange"
+include ':app'
