@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">S2237718</string>
-    <string name="flag_description">Country flag</string>
+    <string name="app_name">Currency Exchange</string>
+    <string name="flag_description">Flag icon</string>
     <string name="sample_code">USD</string>
     <string name="sample_rate">1.2345</string>
     <string name="sample_title">GBP/USD = 1.2345</string>
+    <string name="title_main">Currency Exchange</string>
+    <string name="last_update">Updated: --</string>
+    <string name="search_hint">Search currency...</string>
+    <string name="btn_search">GO</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="section_quick">Quick Rates</string>
+    <string name="section_all">All Currencies</string>
+    <string name="dialog_title">Currency Converter</string>
+    <string name="input_label">Amount</string>
+    <string name="input_hint">0.00</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_swap">Swap</string>
+    <string name="btn_done">Done</string>
 </resources>

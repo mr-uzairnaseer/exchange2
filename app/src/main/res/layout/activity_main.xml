@@ -1,97 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- MPD XML Enhanced main layout: summary, search, list (Portrait) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp">
-
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GBP Exchange Rates"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingBottom="8dp" />
-
-    <TextView
-        android:id="@+id/lastUpdatedText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Last updated: --"
-        android:textSize="14sp"
-        android:paddingBottom="8dp" />
+    android:background="#F5F5F5">
 
     <LinearLayout
-        android:id="@+id/summaryRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:paddingBottom="8dp">
+        android:orientation="vertical"
+        android:background="#2196F3"
+        android:padding="20dp">
 
         <TextView
-            android:id="@+id/summaryUsd"
-            android:layout_width="0dp"
+            android:id="@+id/lastUpdatedText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="USD: --"
-            android:textStyle="bold" />
+            android:text="@string/last_update"
+            android:textSize="11sp"
+            android:textColor="#E3F2FD"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
 
         <TextView
-            android:id="@+id/summaryEur"
-            android:layout_width="0dp"
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="EUR: --"
-            android:textStyle="bold" />
+            android:text="@string/title_main"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="14dp" />
 
-        <TextView
-            android:id="@+id/summaryJpy"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="JPY: --"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:padding="4dp"
+            android:elevation="2dp">
+
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/search_hint"
+                android:background="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:paddingEnd="8dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_search"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="14dp"
         android:paddingBottom="8dp">
-
-        <EditText
-            android:id="@+id/searchEdit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Search: name, code, or country"
-            android:imeOptions="actionSearch"
-            android:singleLine="true" />
 
         <Button
-            android:id="@+id/searchButton"
+            android:id="@+id/refreshButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search" />
-    </LinearLayout>
+            android:layout_height="36dp"
+            android:text="@string/btn_refresh"
+            android:textSize="11sp"
+            android:backgroundTint="#FFC107" />
 
-    <Button
-        android:id="@+id/refreshButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Refresh now" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/section_all"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:gravity="end"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ratesRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:clipToPadding="false"
         android:scrollbars="vertical" />
 
-    <!-- Hidden debug TextView for raw XML if needed -->
+    <LinearLayout
+        android:id="@+id/summaryRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="14dp"
+        android:layout_margin="12dp"
+        android:elevation="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/summaryUsd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                android:textSize="10sp"
+                android:textColor="#757575"
+                android:paddingTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/summaryEur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR"
+                android:textSize="10sp"
+                android:textColor="#757575"
+                android:paddingTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/summaryJpy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JPY"
+                android:textSize="10sp"
+                android:textColor="#757575"
+                android:paddingTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/rawDataDisplay"
         android:layout_width="match_parent"

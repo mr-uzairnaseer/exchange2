@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import android.widget.ImageView;
+import com.google.android.material.snackbar.Snackbar;
+import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView lastUpdatedText, summaryUsd, summaryEur, summaryJpy;
@@ -34,6 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // Hide the action bar title to avoid duplicate "Currency Exchange" text
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        
         lastUpdatedText = findViewById(R.id.lastUpdatedText);
         summaryUsd = findViewById(R.id.summaryUsd);
         summaryEur = findViewById(R.id.summaryEur);
@@ -58,7 +66,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (isNetworkAvailable()) {
                 viewModel.refreshRates();
             } else {
-                Toast.makeText(this, "No internet connection", Toast.LENGTH_LONG).show();
+                // Custom Snackbar for no internet connection
+                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), 
+                    "Unable to connect. Please check your network settings.", 
+                    Snackbar.LENGTH_LONG);
+                
+                // Customize Snackbar appearance
+                View snackbarView = snackbar.getView();
+                snackbarView.setBackgroundColor(Color.parseColor("#D32F2F")); // Dark red background
+                
+                TextView textView = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                textView.setTextColor(Color.parseColor("#FFFFFF")); // White text
+                textView.setTextSize(16);
+                textView.setMaxLines(3);
+                
+                snackbar.show();
                 viewModel.clearRatesOnNoInternet();
             }
         }

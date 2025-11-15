@@ -76,7 +76,7 @@ public class ExchangeViewModel extends ViewModel {
 
     public void clearRatesOnNoInternet() {
         rates.setValue(new ArrayList<>());
-        errorMessage.setValue("No internet connection");
+        errorMessage.setValue(null);  // Don't show error message, Snackbar handles it
     }
 
     public List<CurrencyRate> filterRates(String query) {
