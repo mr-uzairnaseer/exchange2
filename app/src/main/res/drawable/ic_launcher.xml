@@ -5,22 +5,38 @@
     android:viewportWidth="48"
     android:viewportHeight="48">
     
-    <!-- Background circle -->
+    <!-- Background gradient circle -->
     <path
-        android:fillColor="#4CAF50"
+        android:fillColor="#2196F3"
         android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
     
-    <!-- Currency symbol -->
+    <!-- Inner circle -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M24,24m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+    
+    <!-- Dollar sign -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M18,14h12v2h-12z"/>
+        android:pathData="M20,16 Q16,16 16,20 Q16,22 18,23 L20,24 L20,28 Q20,30 22,30 L22,32 L24,32 L24,30 Q28,30 28,26 Q28,24 26,23 L24,22 L24,18 Q24,16 26,16 L26,14 L24,14 L24,16 L22,16 L20,16 Z M20,20 L22,20 L22,22 L20,22 Q18,22 18,20 Q18,18 20,18 L22,18 L22,20 Z M24,24 L26,24 Q28,24 28,26 Q28,28 26,28 L24,28 L24,24 Z"/>
+    
+    <!-- Exchange arrows -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M18,22h12v2h-12z"/>
+        android:fillColor="#FFC107"
+        android:pathData="M14,12 L18,10 L18,14 Z"/>
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M18,30h12v2h-12z"/>
+        android:fillColor="#FFC107"
+        android:pathData="M34,36 L30,38 L30,34 Z"/>
+    
+    <!-- Arrow lines -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M22,12h4v24h-4z"/>
+        android:fillColor="#FFC107"
+        android:strokeWidth="1.5"
+        android:pathData="M16,12 L32,12"
+        android:strokeColor="#FFC107"/>
+    <path
+        android:fillColor="#FFC107"
+        android:strokeWidth="1.5"
+        android:pathData="M32,36 L16,36"
+        android:strokeColor="#FFC107"/>
 </vector>

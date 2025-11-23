@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Currency Exchange</string>
+    <string name="app_name">Syed_Faiq_Ali_S2238968</string>
     <string name="flag_description">Flag icon</string>
     <string name="sample_code">USD</string>
     <string name="sample_rate">1.2345</string>
     <string name="sample_title">GBP/USD = 1.2345</string>
-    <string name="title_main">Currency Exchange</string>
+    <string name="title_main">Syed_Faiq_Ali_S2238968</string>
     <string name="last_update">Updated: --</string>
     <string name="search_hint">Search currency...</string>
     <string name="btn_search">GO</string>

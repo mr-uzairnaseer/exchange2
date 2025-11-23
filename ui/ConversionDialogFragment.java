@@ -85,10 +85,10 @@ public class ConversionDialogFragment extends DialogFragment {
     private void updateDirectionUI() {
         if (gbpToCurrency) {
             directionLabel.setText("GBP → " + currencyCode);
-            directionButton.setText("Switch to " + currencyCode + " → GBP");
+            directionButton.setText("  " + currencyCode + " → GBP");
         } else {
             directionLabel.setText(currencyCode + " → GBP");
-            directionButton.setText("Switch to GBP → " + currencyCode);
+            directionButton.setText("  GBP → " + currencyCode);
         }
     }
 

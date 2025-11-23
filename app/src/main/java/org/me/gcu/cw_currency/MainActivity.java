@@ -97,9 +97,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateSummary(List<CurrencyRate> rates) {
-        summaryUsd.setText("USD: " + findRate(rates, "USD"));
-        summaryEur.setText("EUR: " + findRate(rates, "EUR"));
-        summaryJpy.setText("JPY: " + findRate(rates, "JPY"));
+        summaryUsd.setText(findRate(rates, "USD"));
+        summaryEur.setText(findRate(rates, "EUR"));
+        summaryJpy.setText(findRate(rates, "JPY"));
     }
 
     private String findRate(List<CurrencyRate> rates, String code) {
