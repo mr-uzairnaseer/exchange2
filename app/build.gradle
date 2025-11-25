@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'org.me.gcu.cw_currency'
+    namespace 'org.me.gcu.syed_faiq_ali_s2238968'
     compileSdk 34
 
     defaultConfig {
-        applicationId "org.me.gcu.cw_currency"
+        applicationId "org.me.gcu.syed_faiq_ali_s2238968"
         minSdk 26
         targetSdk 34
         versionCode 1

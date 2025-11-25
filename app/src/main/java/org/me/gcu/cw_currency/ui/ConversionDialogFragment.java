@@ -1,4 +1,4 @@
-package org.me.gcu.cw_currency.ui;
+package org.me.gcu.syed_faiq_ali_s2238968.ui;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import org.me.gcu.cw_currency.R;
-import org.me.gcu.cw_currency.model.CurrencyRate;
+import org.me.gcu.syed_faiq_ali_s2238968.R;
+import org.me.gcu.syed_faiq_ali_s2238968.model.CurrencyRate;
 
 import java.util.Locale;
 

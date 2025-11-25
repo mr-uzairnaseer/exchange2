@@ -1,6 +1,6 @@
-package org.me.gcu.cw_currency.data;
+package org.me.gcu.syed_faiq_ali_s2238968.data;
 
-import org.me.gcu.cw_currency.model.CurrencyRate;
+import org.me.gcu.syed_faiq_ali_s2238968.model.CurrencyRate;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
